@@ -18,15 +18,14 @@ function areaTriangulo(base, altura){
 }
 
 
+// PI
+const PI = Math.PI
+
 // Código del circulo
 // Diámetro
 function diametroCirculo(radio) {
     return radio * 2
 }
-
-
-// PI
-const PI = Math.PI
 
 
 // Circunferencia
@@ -37,7 +36,41 @@ function perimetroCirculo(radio) {
 
 
 // Área
-
 function areaCirculo(radio) {
     return (radio * radio) * PI;
 }
+
+
+// Aquí interactuamos con el HTML
+function calcularPerimetroCuadrado() {
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+
+    const perimetro = perimetroCuadrado(value);
+    alert(perimetro)
+}
+function calcularAreaCuadrado() {
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+
+    const area = areaCuadrado(value);
+    alert(area)
+}
+
+
+
+
+function calcularAltura(lado1, lado2, base) {
+    if (lado1 == lado2 && lado1 != base) {
+        const lado1AlCuadrado = lado1 * lado1;
+        const baseAlCuadrado = base * base;
+        const baseDividada4 = baseAlCuadrado / 4;
+        const lado1MenosBase = lado1AlCuadrado - baseDividada4;
+        const altura = Math.sqrt(lado1MenosBase);
+
+        console.log("La altura del triángulo es: " + altura);
+    } else {
+        alert("El triángulo debe de ser isóceles");
+    }
+}
+
