@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link 
+        rel="stylesheet" 
+        href="./style.css">
+
+    <!-- Google Fonts -->
+    <link 
+        rel="preconnect" 
+        href="https://fonts.googleapis.com">
+    <link 
+        rel="preconnect" 
+        href="https://fonts.gstatic.com" 
+        crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" 
+        rel="stylesheet">
     <title>Figuras geométricas | Curso Práctico de JavaScript en Platzi</title>
 </head>
 <body>
@@ -16,59 +33,81 @@
         </p>
     </header>
 
-    <section>
-        <h2>
-            Calcula el área y perímetro de un cuadrado
-        </h2>
-        <form action="">
-            <label for="InputCuadrado">
-                Escribe cuánto mide cada lado de tu cuadrado:
-            </label>
-            <input 
-                type="number" 
-                id="InputCuadrado">
-
-            <button type="button" onclick="calcularPerimetroCuadrado()">
-                Calcular el perímetro
-            </button>
-
-            <button type="button" onclick="calcularAreaCuadrado()">
-                Calcular el área
-            </button>
-        </form>
-    </section>
-
-    <section>
-        <h2>
-            Calcula la altura de un triángulo isócelos 
-        </h2>
-
-        <label for="InputLado1Triangulo">
-            Escribe cuanto midel el lado 1 del triángulo
-        </label>
-        <input 
-            type="number" 
-            id="InputLado1Triangulo">
+    <main>
+        <!-- Cuadrado -->
+        <section class="calcular-cuadrado">
+            <h2>
+                Calcula el área y perímetro <br> de un cuadrado
+            </h2>
+            <img src="./images/Figuras-cuadrado.svg" alt="">
+            <form action="">
+                <div class="form-container-input">
+                    <label for="InputCuadrado">
+                        Lados del Cuadrado:
+                    </label>
+                    <input
+                        type="number"
+                        id="InputCuadrado">
+                </div>
+    
+                <div class="form-container-buttons">
+                    <button type="button" onclick="calcularPerimetroCuadrado()">
+                        Calcular el perímetro
+                    </button>
         
-        <label for="InputLado2Triangulo">
-            Escribe cuanto midel el lado 2 del triángulo
-        </label>
-        <input 
-            type="number" 
-            id="InputLado2Triangulo">
+                    <button type="button" onclick="calcularAreaCuadrado()">
+                        Calcular el área
+                    </button>
+                </div>
+            </form>
+        </section>
+    
+        <!-- Triángulo -->
+        <section class="calcular-triangulo">
+            <h2>
+                Calcula la altura <br> de un triángulo isócelos 
+            </h2>
 
-        <label for="InputBaseTriangulo">
-            Escribe cuanto midel el lado 1 del triángulo
-        </label>
-        <input 
-            type="number" 
-            id="InputBaseTriangulo">
+            <img src="./images/Figuras-triangulo.svg" alt="">
+    
+            <form action="" class="form-container">
+                <label for="InputLado1Triangulo">
+                    Lado 1 del triángulo
+                    <input 
+                    type="number" 
+                    id="InputLado1Triangulo">
+                </label>
+                
+                
+                <label for="InputLado2Triangulo">
+                    Lado 2 del triángulo
+                    <input 
+                    type="number" 
+                    id="InputLado2Triangulo">
+                </label>
+                
+        
+                <label for="InputBaseTriangulo">
+                    Base del triángulo
+                    <input 
+                    type="number" 
+                    id="InputBaseTriangulo">
+                </label>
+                
+        
+                <button type="button" onclick="calcularAlturaTriangulo()">
+                    Calcular altura
+                </button>
+            </form>
+        </section>
 
-        <button type="button" onclick="calcularAlturaTriangulo()">
-            Calcular altura
-        </button>
-    </section>
+        <!-- Círculo -->
+        <section class="calcular-circulo">
 
+        </section>
+    </main>
+
+    <!-- JavaScript -->
     <script src="./figuras.js"></script>
 </body>
 </html>

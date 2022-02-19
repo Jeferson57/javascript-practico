@@ -17,6 +17,18 @@ function areaTriangulo(base, altura){
     return (base * altura) / 2;
 }
 
+function alturaTriangulo(lado1, lado2, base) {
+    if (lado1 == lado2 && lado1 != base) {
+        const lado1AlCuadrado = lado1 * lado1;
+        const baseAlCuadrado = base * base;
+        const baseDividada4 = baseAlCuadrado / 4;
+        const lado1MenosBase = lado1AlCuadrado - baseDividada4;
+        const altura = Math.sqrt(lado1MenosBase);
+
+        return "La altura del triángulo es: " + altura;
+    }
+}
+
 
 // PI
 const PI = Math.PI
@@ -47,30 +59,32 @@ function calcularPerimetroCuadrado() {
     const value = input.value;
 
     const perimetro = perimetroCuadrado(value);
-    alert(perimetro)
+    alert("El perímetro del cuadrado es de: " + perimetro + "cm");
 }
+
 function calcularAreaCuadrado() {
     const input = document.getElementById("InputCuadrado");
     const value = input.value;
 
     const area = areaCuadrado(value);
-    alert(area)
+    alert("El área del cuadrado es de: " + area + "cm");
 }
 
 
+function calcularAlturaTriangulo() {
+    const inputLado1 = document.getElementById("InputLado1Triangulo");
+    const valueLado1 = inputLado1.value;
 
+    const inputLado2 = document.getElementById("InputLado2Triangulo");
+    const valueLado2 = inputLado2.value;
 
-function calcularAltura(lado1, lado2, base) {
-    if (lado1 == lado2 && lado1 != base) {
-        const lado1AlCuadrado = lado1 * lado1;
-        const baseAlCuadrado = base * base;
-        const baseDividada4 = baseAlCuadrado / 4;
-        const lado1MenosBase = lado1AlCuadrado - baseDividada4;
-        const altura = Math.sqrt(lado1MenosBase);
+    const inputBase = document.getElementById("InputBaseTriangulo");
+    const valueBase = inputBase.value;
 
-        console.log("La altura del triángulo es: " + altura);
+    if (valueLado1 == valueLado2 && valueLado1 != valueBase) {
+        const altura = alturaTriangulo(valueLado1, valueLado2, valueBase);
+        alert(altura);   
     } else {
         alert("El triángulo debe de ser isóceles");
     }
 }
-
