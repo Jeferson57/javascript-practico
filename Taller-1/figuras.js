@@ -25,7 +25,7 @@ function alturaTriangulo(lado1, lado2, base) {
         const lado1MenosBase = lado1AlCuadrado - baseDividada4;
         const altura = Math.sqrt(lado1MenosBase);
 
-        return "La altura del triángulo es: " + altura;
+        return "La altura del triángulo es de: " + altura;
     }
 }
 
@@ -83,8 +83,35 @@ function calcularAlturaTriangulo() {
 
     if (valueLado1 == valueLado2 && valueLado1 != valueBase) {
         const altura = alturaTriangulo(valueLado1, valueLado2, valueBase);
-        alert(altura);   
+        alert(altura + "cm");   
     } else {
-        alert("El triángulo debe de ser isóceles");
+        alert("El lado 1 y el lado 2 de un triángulo isóceles deben de ser de la misma medida.");
     }
+}
+
+function calcularDiametroCirculo() {
+    const inputRadio = document.getElementById("InputRadioCirculo");
+    const valueRadio = inputRadio.value;
+
+    const radio = diametroCirculo(valueRadio);
+
+    alert("El diámetro del círculo es de: " + radio + "cm");
+}
+
+function calcularPerimetroCirculo() {
+    const inputRadio = document.getElementById("InputRadioCirculo");
+    const valueRadio = inputRadio.value;
+
+    const circunferencia = perimetroCirculo(valueRadio);
+
+    alert("El perímetro del circulo es de: " + circunferencia + "cm");
+}
+
+function calcularAreaCirculo() {
+    const inputRadio = document.getElementById("InputRadioCirculo");
+    const valueRadio = inputRadio.value;
+
+    const area = areaCirculo(valueRadio);
+
+    alert("El área del círculo es de: " + area + "cm");
 }

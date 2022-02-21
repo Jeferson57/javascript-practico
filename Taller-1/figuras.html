@@ -103,7 +103,32 @@
 
         <!-- Círculo -->
         <section class="calcular-circulo">
+                <h2>
+                    Calcular el diámetro, perímetro y el área <br> de un circulo.
+                </h2>
 
+                <img src="./images/Figuras-círculo.svg" alt="">
+
+                <form action="" class="form-container">
+                    <label for="InputRadioCirculo">
+                        Radio del círculo
+                        <input 
+                            type="number"
+                            id="InputRadioCirculo">
+                    </label>
+
+                    <div class="form-container-buttons">
+                        <button type="button" onclick="calcularDiametroCirculo()">
+                            Calcular diámetro
+                        </button>
+                        <button type="button" onclick="calcularPerimetroCirculo()">
+                            Calcular perímetro
+                        </button>
+                        <button type="button" onclick="calcularAreaCirculo()">
+                            Calcular área
+                        </button>
+                    </div>
+                </form>
         </section>
     </main>
 
