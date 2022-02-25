@@ -1,0 +1,132 @@
+:root {
+    --xiketic: #03071E;
+    --dark-sienna: #370617;
+    --rosso-corsa: #D00000;
+    --persimmon: #E85D04;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Roboto Serif', sans-serif;
+    font-weight: 900;
+    font-size: 5rem;
+    color: var(--xiketic);
+}
+
+header p {
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin-top: 15px;
+    color: var(--dark-siennas);
+}
+
+section {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+}
+
+section h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--xiketic);
+}
+
+section form {
+    width: 60%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+section form label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: var(--xiketic);
+}
+
+section form label input {
+    padding-left: 12px;
+    margin-top: 8px;
+    height: 26px;
+    border-radius: 12px;
+    border-color: grey;
+    border-style: solid;
+    border-width: 1px;
+    outline: none;
+}
+
+section form p:nth-child(3) {
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+    align-self: center;
+}
+
+section form button:nth-child(5), button:nth-child(7) {
+    align-self: center;
+    height: 38px;
+    width: 250px;
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+    border-color: var(--persimmon);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 12px;
+    background-color: #00000000;
+    color: var(--persimmon);
+    cursor: pointer;
+}
+
+section form button:nth-child(5):hover, button:nth-child(7):hover {
+    background-color: var(--persimmon);
+    color: white;
+}
+
+#errorResult {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 12px;
+    color: var(--rosso-corsa);
+    font-weight: 600;
+    align-self: center;
+}
+
+#ResultPrice {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 12px;
+    color: var(--persimmon);
+    font-weight: 600;
+    align-self: center;
+}

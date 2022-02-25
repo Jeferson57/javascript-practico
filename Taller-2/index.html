@@ -4,10 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Google Fonts -->
+    <link 
+        rel="preconnect" 
+        href="https://fonts.googleapis.com">
+    <link 
+        rel="preconnect" 
+        href="https://fonts.gstatic.com" 
+        crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Serif:wght@700;800;900&display=swap" rel="stylesheet">
     <title>Porcentajes y descuentos | Curso Práctico de JavaScript en Platzi</title>
 </head>
 <body>
-    <h1>Porcentajes y descuentos</h1>
+    <header>
+        <h1>Porcentajes y descuentos</h1>
+        <p>
+            Este es el segundo taller del curso Práctico de JavaScript en Platzi 
+        </p>
+    </header>
+
+    <section>
+        <h2>
+            Calcula el precio a pagar de tus productos con descuentos
+        </h2>
+            <form action="">
+                <label for="InputPrice">
+                    Escribe el precio de tu producto:
+                    <input type="number" id="InputPrice">
+                </label>
+
+                <label for="InputDiscount">
+                    Escribe el descuento de tu producto:
+                    <input type="number" id="InputDiscount">
+                </label>
+
+                <p>o</p>
+
+                <label for="InputCoupon">
+                    Escribe el nombre de tu cupón
+                    <input type="text" id="InputCoupon">
+                </label>
+
+                <button type="button" onclick="onClickButtonPriceDiscount()">
+                    Calcular el precio con descuento
+                </button>
+
+                <p id="errorResult"></p>
+
+                <button type="button" onclick="onClickButtonPriceCoupon()">
+                    Calcular el precio con cupón
+                </button>
+
+                <p id="ResultPrice"></p>
+            </form>
+    </section>
     <script src="./main.js"></script>
 </body>
 </html>
