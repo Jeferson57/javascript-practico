@@ -75,3 +75,21 @@ function calcularMediana(lista) {
 
 // Calcular moda
 const listaCount = {};
+
+lista2.map(
+    function(elemento) {
+        if (listaCount[elemento]) {
+            listaCount[elemento] += 1;
+        } else {
+            listaCount[elemento] = 1;
+        }
+    }
+);
+
+const listaArray = Object.entries(listaCount).sort(
+    fucntion(valorAcumulado, nuevoValor) {
+        return valorAcumulado - nuevoValor;
+    }
+);
+
+const moda = listaArray[listaArray.lenght - 1];
