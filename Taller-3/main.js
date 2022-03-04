@@ -6,7 +6,21 @@ const lista2 = [
     59,
     30,
     7000,
-    62
+    62,
+    100,
+    500,
+    500,
+    59,
+    100,
+    100,
+    100,
+    62,
+    62,
+    30,
+    7000,
+    4000000,
+    100,
+    100
 ];
 
 // Calcular promedio
@@ -58,3 +72,6 @@ function calcularMediana(lista) {
     }
     return mediana;
 }
+
+// Calcular moda
+const listaCount = {};
