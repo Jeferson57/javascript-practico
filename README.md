@@ -54,3 +54,12 @@ Ventajas de usar la moda:
 
  - Puede haber más de dos números que se repitan la misma cantidad de veces
  - Los elementos en nuestra lista no necesariamente deben de ser números. 
+
+ ## Taller #4: Análisis salarial
+En este taller vamos a poner en práctica todo lo que aprendimos en los talleres anteriores. 
+
+Para empezar vamos a tener una lista de personas por cada país. A cada una de estas personas las crearemos como un objeto, y estos objetos tendrán como atributo el salario de la persona. Además podremos agregarle más atributos.
+
+En nuestro análisis tendremos un total del dinero completo de "ingresos mensuales fijos en el país",  el promedio de ingresos fijos y también la mediana de estos ingresos. 
+
+Además, vamos a separar a las personas del top 10% para comparar cuanto ganan las personas en general y cuanto ganan el top 10%
