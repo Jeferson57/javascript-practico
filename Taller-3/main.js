@@ -1,4 +1,4 @@
-const lista2 = [
+const lista = [
     100,
     200,
     500,
@@ -76,9 +76,9 @@ function calcularMediana(lista) {
 // Calcular moda
 const listaCount = {};
 
-lista2.map(
-    function(elemento) {
-        if (listaCount[elemento]) {
+lista.map(
+    function (elemento) {
+        if(listaCount[elemento]) {
             listaCount[elemento] += 1;
         } else {
             listaCount[elemento] = 1;
@@ -87,9 +87,8 @@ lista2.map(
 );
 
 const listaArray = Object.entries(listaCount).sort(
-    fucntion(valorAcumulado, nuevoValor) {
-        return valorAcumulado - nuevoValor;
+    function (valorAcumulado, nuevoValor) {
+        return valorAcumulado[1] - nuevoValor[1];
     }
 );
-
-const moda = listaArray[listaArray.lenght - 1];
+const moda = listaArray[listaArray.length - 1];
